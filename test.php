@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 Error_reporting(E_ALL);
 $numTest = htmlspecialchars($_GET["numTest"]);
 $dir    = 'uploads';
@@ -37,7 +37,7 @@ echo "<br/>";
 
 $result = 0;
 for ($i=0; $i<$countQuestions; $i++) {
-	if (isset($_POST[$i]) == false){
+	if (!isset($_POST[$i])){
 		echo "<br/>";
 		echo "Ответьте на все вопросы и нажмите кнопку 'Отправить'";
 		exit();
